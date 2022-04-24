@@ -2,7 +2,7 @@
 
 ## Purpose
 
-THe purpose of this project was to assess Credit risk (an inherently unbalanced classification problem) by employing different techniques to train and evaluate models with unbalanced classes. We used  imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling. 
+The purpose of this project was to assess Credit risk (an inherently unbalanced classification problem) by employing different techniques to train and evaluate models with unbalanced classes. We used  imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling. 
 
 Using a credit card credit dataset from LendingClub, a peer-to-peer lending services company, we oversampled the data using the RandomOverSampler and SMOTE algorithms, and undersampled the data using the ClusterCentroids algorithm. We then used a combinatorial approach of over- and undersampling using the SMOTEENN algorithm. Next, we compared two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk. Lastly, we will evaluate the performance of these models and make a written recommendation on whether they should be used to predict credit risk.
 
@@ -38,3 +38,14 @@ Balance Accuracy is 79%, while the High-Risk Precision is 4%. Sensitiviy is arou
 <img width="805" alt="Screen Shot 2022-04-24 at 4 08 18 PM" src="https://user-images.githubusercontent.com/95551195/164998754-406080db-9489-44c8-809d-67d1cf7f72a3.png">
 
 Balance Accuracy is 93%, while the High-Risk Precision is 7%. Sensitiviy is around 91% with an F1 score of 14%.
+
+## Summary
+
+Following the completion of the 6 Machine Learning Models, the results highlight the following 'best fit':
+- **Easy Ensemble AdaBoost Classifier**
+- **Balanced Random Forest Classifier**
+- **SMOTEENN**
+- **SMOTE Oversampling** / **Naive Random Oversampling**
+- **UnderSampling**
+
+The model of 'best fit' is the **Easy Ensemble AdaBoost Classifier** with a Balance Accuracy of 93%, High-Risk Precision of 7%, Sensitiviy of 91%, and an F1 score of 14%. However, it is necessary to highlight the concern around the small/skewed sample size of low_risk apps (68470) vs high_risk apps (347). The models may predict differing outcomes if provided with equated samples/datasets.
